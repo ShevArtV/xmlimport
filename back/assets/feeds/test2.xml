@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="10.02.2024 12:02:04">
+    <name>Арника</name>
+    <company>ТД Арника</company>
+    <url>https://td-arnika.ru</url>
+    <categories>
+        <category id="1679">Обувницы</category>
+        <category id="1680" parentId="1679">Открытые</category>
+        <category id="1681" parentId="1679">Подвесные</category>
+        <category id="1682" parentId="1679">С сидением</category>
+        <category id="1683" parentId="1679">Узкие</category>
+    </categories>
+    <offers>
+        <offer>
+            <id>123456</id>
+            <name>Tecт564564овый товар1</name>
+            <description><![CDATA[Мечтаете обустроить функциональную прихожую, используя при этом минимум пространства? Бережно хранить всю Вашу уличную и домашнюю обувь и соблюдать порядок во входной зоне поможет высокая и узкая обувница из коллекции Sherlock. Несмотря на глубину всего в 30 см, модуль вмещает до 18 пар обуви одновременно, а также аксессуары и уходовые средства. Вы можете переставлять стальные держатели исходя из размера обуви: для этого в 2-х верхних и 2-х нижних рядах предусмотрена дополнительная присадка. Шкаф оснащен шариковыми направляющими полного выдвижения и выкатными роликами, посему Вам будет комфортно пользоваться шкафом-обувницей каждый день.
+		Особенности
+		ЛДСП, профиль МДФ, кромка ПВХ
+		декор "ясень анкор светлый"
+		выдвижные ящики на шариковых направляющих
+		выкатной ролик
+		стальные прутья диаметром 10 мм
+		регулируемые опоры, сглаживающие неровности пола]]></description>
+            <url>https://td-arnika.ru/catalog/shkafy/shkaf_dlya_obuvi_sherlock_73_levyy_yasen_svetlyy/</url>
+            <picture>https://td-arnika.ru/upload/iblock/cb5/jqaybxfues90i5m1xb7zfxs9kcddsaen.jpg</picture>
+            <picture>https://td-arnika.ru/upload/iblock/943/xyskh6j0pk84m2ixsijt564ykic4l1oj.png</picture>
+            <main_category>1680</main_category>
+            <assembly>true</assembly>
+            <currencyId>RUB</currencyId>
+            <price>12500</price>
+            <old_price>15665</old_price>
+            <stock>0</stock>
+            <count>0</count>
+            <article>Н001683</article>
+            <model>Н001683</model>
+            <vendor>ГЛАЗОВ МЕБЕЛЬ</vendor>
+            <country_of_origin>Россия</country_of_origin>
+            <available>false</available>
+            <param name="Ширина">30</param>
+            <param name="Высота">211.3</param>
+            <param name="Глубина">40</param>
+            <param name="Назначение">Для прихожей</param>
+            <param name="Стиль">Классический</param>
+            <param name="Цвет для сайта">Ясень</param>
+            <param name="Материал">ЛДСП</param>
+            <param name="Материал">МДФ</param>
+            <param name="Описание для анонса">Шкаф для обуви Sherlock 73 левый, ясень светлый</param>
+            <param name="Цвет">Ясень Анкор светлый</param>
+            <param name="ID Элемента">50769</param>
+            <param name="Вес">50</param>
+            <param name="CHAIN_CATEGORY">1681,1682</param>
+            <param name="Коллекция">Шерлок</param>
+            <param name="Габариты">30/211.3</param>
+            <param name="Объем товара">0.09</param>
+            <param name="Производитель">Глазов</param>
+        </offer>
+        <offer>
+            <id>0986353</id>
+            <name>Tecтовый товар2</name>
+            <description><![CDATA[Мечтаете обустроить функциональную прихожую, используя при этом минимум пространства? Бережно хранить всю Вашу уличную и домашнюю обувь и соблюдать порядок во входной зоне поможет высокая и узкая обувница из коллекции Sherlock. Несмотря на глубину всего в 30 см, модуль вмещает до 18 пар обуви одновременно, а также аксессуары и уходовые средства. Вы можете переставлять стальные держатели исходя из размера обуви: для этого в 2-х верхних и 2-х нижних рядах предусмотрена дополнительная присадка. Шкаф оснащен шариковыми направляющими полного выдвижения и выкатными роликами, посему Вам будет комфортно пользоваться шкафом-обувницей каждый день.
+		Особенности
+		ЛДСП, профиль МДФ, кромка ПВХ
+		декор "ясень анкор светлый"
+		выдвижные ящики на шариковых направляющих
+		выкатной ролик
+		стальные прутья диаметром 10 мм
+		регулируемые опоры, сглаживающие неровности пола]]></description>
+            <url>https://td-arnika.ru/catalog/shkafy/shkaf_dlya_obuvi_sherlock_73_levyy_yasen_svetlyy/</url>
+            <picture>https://td-arnika.ru/upload/iblock/cb5/jqaybxfues90i5m1xb7zfxs9kcddsaen.jpg</picture>
+            <picture>https://td-arnika.ru/upload/iblock/943/xyskh6j0pk84m2ixsijt564ykic4l1oj.png</picture>
+            <main_category>1682</main_category>
+            <assembly>true</assembly>
+            <currencyId>RUB</currencyId>
+            <price>13599</price>
+            <old_price>15665</old_price>
+            <stock>1</stock>
+            <count>0</count>
+            <article>Н001683</article>
+            <model>Н001683</model>
+            <vendor>ГЛАЗОВ МЕБЕЛЬ</vendor>
+            <country_of_origin>Россия</country_of_origin>
+            <available>false</available>
+            <param name="Ширина">30</param>
+            <param name="Высота">211.3</param>
+            <param name="Глубина">40</param>
+            <param name="Назначение">Для прихожей</param>
+            <param name="Стиль">Классический</param>
+            <param name="Цвет для сайта">Ясень</param>
+            <param name="Материал">ЛДСП</param>
+            <param name="Материал">МДФ</param>
+            <param name="Описание для анонса">Шкаф для обуви Sherlock 73 левый, ясень светлый</param>
+            <param name="Цвет">Ясень Анкор светлый</param>
+            <param name="ID Элемента">50769</param>
+            <param name="Вес">50</param>
+            <param name="CHAIN_CATEGORY">1683</param>
+            <param name="Коллекция">Шерлок</param>
+            <param name="Габариты">30/211.3</param>
+            <param name="Объем товара">0.09</param>
+            <param name="Производитель">Глазов</param>
+        </offer>
+        <offer>
+            <id>5657868</id>
+            <name>Tecтовый товар3</name>
+            <description><![CDATA[Мечтаете обустроить функциональную прихожую, используя при этом минимум пространства? Бережно хранить всю Вашу уличную и домашнюю обувь и соблюдать порядок во входной зоне поможет высокая и узкая обувница из коллекции Sherlock. Несмотря на глубину всего в 30 см, модуль вмещает до 18 пар обуви одновременно, а также аксессуары и уходовые средства. Вы можете переставлять стальные держатели исходя из размера обуви: для этого в 2-х верхних и 2-х нижних рядах предусмотрена дополнительная присадка. Шкаф оснащен шариковыми направляющими полного выдвижения и выкатными роликами, посему Вам будет комфортно пользоваться шкафом-обувницей каждый день.
+		Особенности
+		ЛДСП, профиль МДФ, кромка ПВХ
+		декор "ясень анкор светлый"
+		выдвижные ящики на шариковых направляющих
+		выкатной ролик
+		стальные прутья диаметром 10 мм
+		регулируемые опоры, сглаживающие неровности пола]]></description>
+            <url>https://td-arnika.ru/catalog/shkafy/shkaf_dlya_obuvi_sherlock_73_levyy_yasen_svetlyy/</url>
+            <picture>https://td-arnika.ru/upload/iblock/cb5/jqaybxfues90i5m1xb7zfxs9kcddsaen.jpg</picture>
+            <picture>https://td-arnika.ru/upload/iblock/943/xyskh6j0pk84m2ixsijt564ykic4l1oj.png</picture>
+            <main_category>1680</main_category>
+            <assembly>true</assembly>
+            <currencyId>RUB</currencyId>
+            <price>13599</price>
+            <old_price>15665</old_price>
+            <stock>0</stock>
+            <count>0</count>
+            <article>Н001683</article>
+            <model>Н001683</model>
+            <vendor>ГЛАЗОВ МЕБЕЛЬ</vendor>
+            <country_of_origin>Россия</country_of_origin>
+            <available>false</available>
+            <param name="Ширина">30</param>
+            <param name="Высота">211.3</param>
+            <param name="Глубина">40</param>
+            <param name="Назначение">Для прихожей</param>
+            <param name="Стиль">Классический</param>
+            <param name="Цвет для сайта">Ясень</param>
+            <param name="Материал">ЛДСП</param>
+            <param name="Материал">МДФ</param>
+            <param name="Описание для анонса">Шкаф для обуви Sherlock 73 левый, ясень светлый</param>
+            <param name="Цвет">Ясень Анкор светлый</param>
+            <param name="ID Элемента">50769</param>
+            <param name="Вес">50</param>
+            <param name="CHAIN_CATEGORY">1681</param>
+            <param name="Коллекция">Шерлок</param>
+            <param name="Год">2021</param>
+            <param name="Габариты">30/211.3</param>
+            <param name="Объем товара">0.09</param>
+            <param name="Производитель">Глазов</param>
+            <param name="Дата релиза">20.10.2018</param>
+        </offer>
+    </offers>
+</export>

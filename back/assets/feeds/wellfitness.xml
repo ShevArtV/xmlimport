@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2024-02-17T14:55:07+03:00">
+    <shop>
+        <name>wellfitness.ru</name>
+        <company>wellfitness.ru</company>
+        <url>https://www.wellfitness.ru</url>
+        <platform>BSM/Yandex/Market</platform>
+        <version>2.3.5</version>
+        <cpa>1</cpa>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+            <category id="3787">Беговые дорожки</category>
+            <category id="4242">Эллиптические тренажеры</category>
+            <category id="4240">Велотренажеры</category>
+            <category id="4243">Массажное оборудование</category>
+            <category id="4244" parentId="4243">Массажные кресла</category>
+            <category id="4409">Инверсионные столы</category>
+            <category id="4268">Свободные веса</category>
+            <category id="4269" parentId="4268">Гантели и гантельные ряды</category>
+            <category id="4270" parentId="4268">Гири</category>
+            <category id="4271" parentId="4268">Диски и Грифы</category>
+            <category id="4241">Гребные тренажеры</category>
+            <category id="4278">Функциональный тренинг</category>
+            <category id="4306" parentId="4278">Аксессуары для ФТ</category>
+            <category id="4279" parentId="4278">Функциональные комплексы</category>
+            <category id="4238">Батуты</category>
+            <category id="4239">Горнолыжные тренажеры</category>
+            <category id="4245">Настольный теннис</category>
+            <category id="4246" parentId="4245">Теннисные столы</category>
+            <category id="4254">Уличные виды спорта</category>
+            <category id="4255" parentId="4254">Баскетбол</category>
+            <category id="4256" parentId="4254">Футбол</category>
+            <category id="4293">Аксессуары для дома</category>
+            <category id="4237">Аксессуары к тренажерам</category>
+            <category id="4272">Силовые тренажеры</category>
+            <category id="4273" parentId="4272">Грузоблочные тренажеры</category>
+            <category id="4277" parentId="4272">Тренажеры нагружаемые дисками</category>
+            <category id="4274" parentId="4272">Мультистанции</category>
+            <category id="4275" parentId="4272">Рамы и машины Смита</category>
+            <category id="4276" parentId="4272">Скамьи и стойки</category>
+            <category id="4253" parentId="4272">Скамьи, рамы и машины Смита</category>
+            <category id="4285">Игровые столы</category>
+            <category id="4286" parentId="4285">Аэрохоккей</category>
+            <category id="4287" parentId="4285">Футбол</category>
+            <category id="4308">Групповые программы</category>
+            <category id="4309" parentId="4308">Бодибары</category>
+        </categories>
+        <enable_auto_discounts>true</enable_auto_discounts>
+        <offers>
+            <offer id="39227" type="vendor.model" available="true">
+                <url>https://www.wellfitness.ru/catalog/begovaya_dorozhka_smith_st870/</url>
+                <price>1170400</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3787</categoryId>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/39a/q7tysr8thllgusulccyg9rw5rgb8poev/daa4a471-25bf-11ec-80df-00259003a1ce_24d4b7d9-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/931/83fd5pys3y5suqq8a3ysic61otqwtwn0/daa4a471-25bf-11ec-80df-00259003a1ce_264033ff-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/802/h99l5qf3f4drq8hye29wq2yhwre178ke/daa4a471-25bf-11ec-80df-00259003a1ce_264048a3-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/6b0/6vmx15qxpcd106mcmmspksqfioz90wrj/daa4a471-25bf-11ec-80df-00259003a1ce_26ca84e4-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/c1b/57icgyc4xvalog97nmdevlmr6wyoa21z/daa4a471-25bf-11ec-80df-00259003a1ce_26ca8fdd-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/cee/t8bi12jiqzkiza4bd2f3rd0t3t4h7krh/daa4a471-25bf-11ec-80df-00259003a1ce_27547eab-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/63e/1honsn9am61uowg4wshrkkjtuf4h8d69/daa4a471-25bf-11ec-80df-00259003a1ce_27548437-c5ad-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <vendor>SMITH</vendor>
+                <model>Профессиональная Беговая дорожка Smith ST870</model>
+                <description>
+                    <![CDATA[
+<p>Беговая дорожка Smith ST800/ST870 уникальна для рынка профессиональных тренажеров. Это беговая дорожка относится к классу «Бизнес+», обладая уникальными характеристиками и выполненная из премиальных материалов. Произведенная для бренда Smith в Южной Корее на заводе-лидере в своём сегменте (Taeha Mechatronics), оснащенная двигателем Hyundai® мощностью 5.5 л.с., с электронным оснащением 100% собственного производства, эта модель конкурирует только с премиальным сегментом.</p>
+<br>
+<p>Интуитивно-понятный интерфейс консоли расположен под максимально удобным углом для подавляющего большинства пользователей. Управление тренировкой происходит с многофункционального, лаконичного пульта управления FastTrack, содержащего все нужные кнопки как для быстрого старта, так и доступа к разнообразным тренировочным программам. Переключение между программами происходит в режиме on-thе-fly (на «лету»), без необходимости остановки и запуска новой программы.</p>
+<br>
+<p>Собственная система амортизации TrapSpring™ включает в себя не только полимерные амортизаторы особой конструкции, но и механизм амортизации всей рамы, так что любой, кто бегает на Smith ST800/ST870 получает максимальный комфорт и непередаваемые ощущения. Высококачественная MDF-дека и 4-х слойное беговое полотно голландской компании Ammeraal Beltech®, а также система автоматического натяжения приводного ремня, не только вносят свой вклад в комфортный бег, но являются залогом надежности работы оборудования долгие годы.</p>
+<br>
+<p>Многоканальное Bluetooth-соединение для гаджетов (только модель ST870), высокоскоростные сенсоры остановки бегового полотна, удобные лотки для аксессуаров, ниша для телефона/планшета, наличие USB для зарядки гаджетов, инструкции по тренировки на русском языке – это всё неотъемлемые составляющие премиального комфорта тренировок на беговой дорожке Smith ST800/ST870.</p>
+]]>
+                </description>
+                <param name="Анонс">Беговая дорожка Smith ST870</param>
+                <param name="Доступное количество">1</param>
+                <param name="Артикул">ST870</param>
+                <param name="Бренд">SMITH</param>
+                <param name="Страна изготовления">Корея</param>
+                <param name="Тип двигателя">переменного тока AC</param>
+                <param name="Максимальный вес пользователя, кг">181</param>
+                <param name="Максимальная скорость, км/ч">20</param>
+                <param name="Минимальная скорость, км/ч">0.8</param>
+                <param name="Назначение">профессиональные (24/7)</param>
+                <param name="Тип беговой дорожки">электрические</param>
+                <param name="Регулировка угла наклона">электронный</param>
+                <param name="Поддержка кардиопояса">есть</param>
+                <param name="Тип конструкции">нескладные</param>
+                <param name="Мощность двигателя">5.5</param>
+                <param name="Беговое полотно, см">156 х 56</param>
+                <param name="Дека, мм">25</param>
+                <param name="Амортизация">есть</param>
+                <param name="Тип дисплея">TFT touch-screen</param>
+                <param name="Подсветка дисплея">есть</param>
+                <param name="Показания консоли">Мультимедиа + скорость / расстояние / время / наклон / частота пульса / калории / программы</param>
+                <param name="Общее количество программ">37</param>
+                <param name="Язык(и) интерфейса">русский</param>
+                <param name="Размер в рабочем состоянии Длина, см">214</param>
+                <param name="Размер в рабочем состоянии Ширина, см">96</param>
+                <param name="Размер в рабочем состоянии Высота, см">162</param>
+                <param name="Вес Нетто, кг">225</param>
+                <param name="Вес Брутто, кг">235</param>
+                <param name="Преимущество 1">Надежный профессиональный двигатель мощностью 5,5 л.с.</param>
+                <param name="Преимущество 2">HD дисплей.</param>
+                <param name="Преимущество 3">16 уровней наклона.</param>
+                <param name="Преимущество 4">Полотно рассчитано на нагрузки до 181 кг.</param>
+                <param name="Преимущество 5">Мягкая система амортизации TrapSpring™ (амортизаторы особой конструкции)</param>
+                <param name="Доступность">Y</param>
+                <param name="Габариты упаковки Длина, см">224</param>
+                <param name="Габариты упаковки Ширина, см">103</param>
+                <param name="Габариты упаковки Высота, см">74</param>
+            </offer>
+            <offer id="39228" type="vendor.model" available="true">
+                <url>https://www.wellfitness.ru/catalog/begovaya_dorozhka_cardiopower_s40_v2/</url>
+                <price>79900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3787</categoryId>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/da9/el6eat9m2rsyigyudp20w365ydv0ddc1/93352226-25c0-11ec-80df-00259003a1ce_35bbe8d3-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/a78/5wqm48yiiy0barjeap4nl64d15x5fx50/93352226-25c0-11ec-80df-00259003a1ce_35bbe919-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/ed4/p0tzjlktcl38r9s9ha76tx7rcc6ajag7/93352226-25c0-11ec-80df-00259003a1ce_35bbe95f-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/348/zbolgv43puwyc8hzq0irm672j7na90xt/93352226-25c0-11ec-80df-00259003a1ce_35bbe9a5-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/d9b/nm6i1g9e4q7ynqunso36vum1qkwz2x71/93352226-25c0-11ec-80df-00259003a1ce_3bb8e619-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/d73/9fqwxq2fahojmw6ndlqjq57xinlok9dd/93352226-25c0-11ec-80df-00259003a1ce_3bb8e65f-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/84a/buc9jpqpha7a35u8iv31tztde5zg2old/93352226-25c0-11ec-80df-00259003a1ce_3bb8e6b7-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/707/7oz3mjgll4gchjzwavmab9cir3w4nz5a/93352226-25c0-11ec-80df-00259003a1ce_3bb8e721-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <vendor>CardioPower</vendor>
+                <model>Беговая дорожка CardioPower S40</model>
+                <description>
+                    <![CDATA[
+<p>CardioPower S40 - стильная и функциональная беговая дорожка для занятий в домашних условиях. Самые современные технологии, усиленная рама и качественные комплектующие обеспечивают надежную эксплуатацию и отличные технические характеристики.</p>
+<br>
+<p>ИДЕАЛЬНЫЕ ВОЗМОЖНОСТИ ДЛЯ ИНТЕНСИВНЫХ ТРЕНИРОВОК:</p>
+<br>
+<li>Максимальная скорость бега до 18 км/ч, шаг изменения 0,1 км/ч;</li>
+<li>Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом наклона;</li>
+<li>Большое беговое полотно 140 х 48 см создает комфортные условия для бега;</li>
+<li>Мощный электродвигатель 2,5 л.с. с пиковой мощностью 3,5 л.с. от NNNSE CO., LTD. с максимально тихим и плавным ходом;</li>
+<li>Усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека 18 мм выдерживают условия интенсивной эксплуатации пользователям с весом до 140 кг.</li>
+<br>
+<p>ПРОДУМАННЫЙ ФУНКЦИОНАЛ ДЛЯ КОМФОРТНЫХ ТРЕНИРОВОК:</p>
+<br>
+<li>Удобная консоль с клавишами быстрого управления и широким 7-ми дюймовым LCD дисплеем с мягкой голубой подсветкой предоставляет полную информацию о текущих показателях тренировки: скорость, время, расстояние, калории, угол наклона, частота пульса, выбранная программа;</li>
+<li>12 целевых программ для максимальной мотивации и результативности тренировок;</li>
+<li>Возможность подключения любимой музыки через MP3 и встроенной акустической систему;</li>
+<li>Bluetooth для подключения внешних устройств;</li>
+<li>Держатель для планшета, зарядка USB, держатель для бутылки и вентилятор для создания комфортных условий во время тренировки;</li>
+<li>Легкий и удобный гидравлический механизм складывания SmartFold с функцией плавного опускания позволяет быстро и безопасно сложить беговую дорожку до максимально компактного размера, а транспортировочные ролики без усилий переместить в случае необходимости.</li>
+<br>
+<p>СТАНДАРТ НАДЕЖНОСТИ И БЕЗОПАСНОСТИ:</p>
+<br>
+<li>Усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека 18 мм выдерживают условия интенсивной эксплуатации пользователям с весом до 140 кг;</li>
+<li>Высокая надежность комплектующих и качество сборки по самым передовым технологиям;</li>
+<li>Инновационная система амортизации AirCushion с эластомерами снижает нагрузку на суставы, делая тренировки максимально безопасными;</li>
+<li>Контроль пульса: Встроенные сенсоры пульса и возможность подключения кардиопояса обеспечивают точный контроль над сердечным ритмом, позволяя оставаться в пределах заданного пульсового диапазона.</li>
+]]>
+                </description>
+                <param name="Анонс">Беговая дорожка CardioPower S40 - V2</param>
+                <param name="Доступное количество">90</param>
+                <param name="Артикул">S40 - V2</param>
+                <param name="Бренд">CardioPower</param>
+                <param name="Страна изготовления">КНР</param>
+                <param name="Тип двигателя">постоянного тока DC</param>
+                <param name="Максимальный вес пользователя, кг">140</param>
+                <param name="Максимальная скорость, км/ч">18</param>
+                <param name="Минимальная скорость, км/ч">1</param>
+                <param name="Назначение">домашние</param>
+                <param name="Тип беговой дорожки">электрические</param>
+                <param name="Регулировка угла наклона">электронный</param>
+                <param name="Поддержка кардиопояса">есть</param>
+                <param name="Тип конструкции">складные</param>
+                <param name="Мощность двигателя">2.5</param>
+                <param name="Пиковая мощность двигателя">3.5</param>
+                <param name="Беговое полотно, см">140 х 48</param>
+                <param name="Дека, мм">18</param>
+                <param name="Амортизация">есть</param>
+                <param name="Тип дисплея">LCD</param>
+                <param name="Подсветка дисплея">есть</param>
+                <param name="Показания консоли">скорость / расстояние / время / наклон / частота пульса / калории / программы</param>
+                <param name="Общее количество программ">12</param>
+                <param name="Язык(и) интерфейса">английский</param>
+                <param name="Размер в рабочем состоянии Длина, см">177</param>
+                <param name="Размер в рабочем состоянии Ширина, см">79</param>
+                <param name="Размер в рабочем состоянии Высота, см">136.6</param>
+                <param name="Вес Нетто, кг">85</param>
+                <param name="Вес Брутто, кг">96</param>
+                <param name="Преимущество 1">Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом
+                    наклона.
+                </param>
+                <param name="Преимущество 2">усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека.</param>
+                <param name="Преимущество 3">Удобная консоль с клавишами быстрого управления и широким LCD дисплеем.</param>
+                <param name="Преимущество 4">Bluetooth для подключения внешних устройств.</param>
+                <param name="Преимущество 5">Инновационная система амортизации AirCushion с эластомерами.</param>
+                <param name="Доступность">Y</param>
+                <param name="Габариты упаковки Длина, см">179.5</param>
+                <param name="Габариты упаковки Ширина, см">81</param>
+                <param name="Габариты упаковки Высота, см">36.5</param>
+            </offer>
+            <offer id="39229" type="vendor.model" available="false">
+                <url>https://www.wellfitness.ru/catalog/begovaya_dorozhka_cardiopower_s45_v5/</url>
+                <price>92900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3787</categoryId>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/c3c/xwc81hrblm2otbktypm52k8vgzbvydm2/acfb4232-25c0-11ec-80df-00259003a1ce_6eb487f9-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/f32/3knm8w68xpv7l3o1ki087vjzvcs9zpk0/acfb4232-25c0-11ec-80df-00259003a1ce_74b42c69-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/4fb/w0kw7pa4bfzyshs1sh82d0kf4lbyabn1/acfb4232-25c0-11ec-80df-00259003a1ce_74b42cc1-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/863/act7h7xssvs8ejr74g3asn67dk6pxhvq/acfb4232-25c0-11ec-80df-00259003a1ce_74b42d07-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/2ea/q4ub5c8ysp5x7ew6m0q4s8wezcod66pt/acfb4232-25c0-11ec-80df-00259003a1ce_74b42d4d-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/7df/nsgq53jlctp402sjtitqwlatvey5gea0/acfb4232-25c0-11ec-80df-00259003a1ce_74b42ddb-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/d91/30kbiujucj2486cdy7wbih5ff5rn1gmp/acfb4232-25c0-11ec-80df-00259003a1ce_74b42e33-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/b3a/p5fvw9bdwv20x00x574pdtkivx8hsiwp/acfb4232-25c0-11ec-80df-00259003a1ce_74b42e8b-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/548/xumjripc8w48u4fk9o2zfe2hp73pkssc/acfb4232-25c0-11ec-80df-00259003a1ce_74b42f07-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <vendor>CardioPower</vendor>
+                <model>Беговая дорожка CardioPower S45</model>
+                <description>
+                    <![CDATA[
+<p>CardioPower S45 - стильная и функциональная беговая дорожка для занятий в домашних условиях. Самые современные технологии, усиленная рама и качественные комплектующие обеспечивают надежную эксплуатацию и отличные технические характеристики.</p>
+<br>
+<p>ИДЕАЛЬНЫЕ ВОЗМОЖНОСТИ ДЛЯ ИНТЕНСИВНЫХ ТРЕНИРОВОК</p>
+<br>
+<li>Максимальная скорость бега до 18 км/ч, шаг изменения 0,1 км/ч;</li>
+<li>Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом наклона;</li>
+<li>Большое беговое полотно 150 х 50 см создает комфортные условия для бега;</li>
+<li>Мощный электродвигатель 3,0 л.с. с пиковой мощностью 4,0 л.с. от NNNSE CO., LTD. с максимально тихим и плавным ходом;</li>
+<li>усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека 18 мм выдерживают условия интенсивной эксплуатации пользователям с весом до 150 кг.</li>
+<br>
+<p>ПРОДУМАННЫЙ ФУНКЦИОНАЛ ДЛЯ КОМФОРТНЫХ ТРЕНИРОВОК</p>
+<br>
+<li>Удобная консоль с клавишами быстрого управления и широким 8-ми дюймовым LCD дисплеем с мягкой голубой подсветкой предоставляет полную информацию о текущих показателях тренировки: скорость, время, расстояние, калории, угол наклона, частота пульса, выбранная программа;</li>
+<li>12 целевых программ для максимальной мотивации и результативности тренировок;</li>
+<li>Возможность подключения любимой музыки через MP3 и встроенной акустической систему;</li>
+<li>Bluetooth для подключения внешних устройств;</li>
+<li>Держатель для планшета, зарядка USB, держатель для бутылки и вентилятор для создания комфортных условий во время тренировки;</li>
+<li>Легкий и удобный гидравлический механизм складывания SmartFold с функцией плавного опускания позволяет быстро и безопасно сложить беговую дорожку до максимально компактного размера, а транспортировочные ролики без усилий переместить в случае необходимости.</li>
+<br>
+<p>СТАНДАРТ НАДЕЖНОСТИ И БЕЗОПАСНОСТИ</p>
+<br>
+<li>Усиленная конструкция рамы;</li>
+<li>Высокая надежность комплектующих и качество сборки по самым передовым технологиям;</li>
+<li>Инновационная система амортизации AirCushion с эластомерами снижает нагрузку на суставы, делая тренировки максимально безопасными;</li>
+<li>Контроль пульса: Встроенные сенсоры пульса и возможность подключения кардиопояса обеспечивают точный контроль над сердечным ритмом.</li>
+]]>
+                </description>
+                <param name="Анонс">Беговая дорожка CardioPower S45 - V5</param>
+                <param name="Доступное количество">1</param>
+                <param name="Артикул">S45 - V5</param>
+                <param name="Бренд">CardioPower</param>
+                <param name="Страна изготовления">КНР</param>
+                <param name="Тип двигателя">постоянного тока DC</param>
+                <param name="Максимальный вес пользователя, кг">150</param>
+                <param name="Максимальная скорость, км/ч">18</param>
+                <param name="Минимальная скорость, км/ч">1</param>
+                <param name="Назначение">домашние</param>
+                <param name="Тип беговой дорожки">электрические</param>
+                <param name="Регулировка угла наклона">электронный</param>
+                <param name="Поддержка кардиопояса">есть</param>
+                <param name="Тип конструкции">складные</param>
+                <param name="Мощность двигателя">3</param>
+                <param name="Пиковая мощность двигателя">4</param>
+                <param name="Беговое полотно, см">150 х 50</param>
+                <param name="Дека, мм">18</param>
+                <param name="Амортизация">есть</param>
+                <param name="Тип дисплея">LCD</param>
+                <param name="Подсветка дисплея">есть</param>
+                <param name="Показания консоли">скорость / расстояние / время / наклон / частота пульса / калории / программы</param>
+                <param name="Общее количество программ">12</param>
+                <param name="Язык(и) интерфейса">английский</param>
+                <param name="Размер в рабочем состоянии Длина, см">187</param>
+                <param name="Размер в рабочем состоянии Ширина, см">84.5</param>
+                <param name="Размер в рабочем состоянии Высота, см">146</param>
+                <param name="Вес Нетто, кг">100</param>
+                <param name="Вес Брутто, кг">112</param>
+                <param name="Преимущество 1">Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом
+                    наклона.
+                </param>
+                <param name="Преимущество 2">Мощный электродвигатель 3,0 л.с. с пиковой мощностью 4,0 л.с.</param>
+                <param name="Преимущество 3">усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека.</param>
+                <param name="Преимущество 4">Удобная консоль с клавишами быстрого управления.</param>
+                <param name="Преимущество 5">Широкий LCD дисплей.</param>
+                <param name="Доступность">Y</param>
+                <param name="Габариты упаковки Длина, см">191</param>
+                <param name="Габариты упаковки Ширина, см">88</param>
+                <param name="Габариты упаковки Высота, см">37.5</param>
+            </offer>
+            <offer id="39230" type="vendor.model" available="false">
+                <url>https://www.wellfitness.ru/catalog/begovaya_dorozhka_cardiopower_t60_v6c/</url>
+                <price>104900</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3787</categoryId>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/f27/i9mad7ap7eo1rwn830svxm5ig2x8i965/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73d4b-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/3f3/c0u5hh816bhdu6xtyzn46wq1yx4s7ed2/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73dc7-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/ec6/0ki3y1s4kws614g5gxqeofkra2lcb018/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73e0d-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/293/7mz9knzi4xmono031apqi7sja0q7xeiw/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73e65-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/ffe/m14ju3iqmfnwb6annkjkrehuy72crlk2/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73ebd-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/ead/6ylpuhzzkyn0uetkvkjwftuu431l9lga/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73f03-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/d69/e1txswgt2lpzke0putv02p60ubrmn8wv/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73f5b-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/cbf/iwvh0f2n0pdd9k8qebd4zdd4zqwtutfz/09fd5de6-25c1-11ec-80df-00259003a1ce_7ac73fd7-c5ab-11ee-96e5-a2cccdee0fc4.png
+                </picture>
+                <vendor>CardioPower</vendor>
+                <model>Беговая дорожка CardioPower T60</model>
+                <description>
+                    <![CDATA[
+<p>CardioPower T60 - стильная и функциональная беговая дорожка для занятий в домашних условиях. Самые современные технологии, усиленная рама и качественные комплектующие обеспечивают надежную эксплуатацию и отличные технические характеристики.</p>
+<br>
+<p>ИДЕАЛЬНЫЕ ВОЗМОЖНОСТИ ДЛЯ ИНТЕНСИВНЫХ ТРЕНИРОВОК</p>
+<br>
+<li>Максимальная скорость бега до 18 км/ч, шаг изменения 0,1 км/ч;</li>
+<li>Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом наклона;</li>
+<li>Большое беговое полотно 150 х 52 см создает комфортные условия для бега;</li>
+<li>Мощный электродвигатель 3,25 л.с. с пиковой мощностью 4,25 л.с. от NNNSE CO., LTD. с максимально тихим и плавным ходом;</li>
+<li>усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека 18 мм выдерживают условия интенсивной эксплуатации пользователям с весом до 150 кг.</li>
+<br>
+<p>ПРОДУМАННЫЙ ФУНКЦИОНАЛ ДЛЯ КОМФОРТНЫХ ТРЕНИРОВОК</p>
+<br>
+<li>Удобная консоль с клавишами быстрого управления и широким 8-ми дюймовым LCD дисплеем с мягкой голубой подсветкой предоставляет полную информацию о текущих показателях тренировки: скорость, время, расстояние, калории, угол наклона, частота пульса, выбранная программа;</li>
+<li>Целевые программы для максимальной мотивации и результативности тренировок;</li>
+<li>HR Программы - Пульсозависимые программы, изменяют нагрузку для поддержания заданного целевого уровня пульса;</li>
+<li>Клавиши быстрого выбора Скорости и Угла наклона;</li>
+<li>Возможность подключения любимой музыки через MP3 и встроенной акустической систему;</li>
+<li>Bluetooth для подключения внешних устройств;</li>
+<li>Держатель для планшета, зарядка USB, держатель для бутылки и вентилятор для создания комфортных условий во время тренировки;</li>
+<li>Легкий и удобный гидравлический механизм складывания SmartFold с функцией плавного опускания позволяет быстро и безопасно сложить беговую дорожку до максимально компактного размера, а транспортировочные ролики без усилий переместить в случае необходимости.</li>
+<br>
+<p>СТАНДАРТ НАДЕЖНОСТИ И БЕЗОПАСНОСТИ</p>
+<br>
+<li>Усиленная конструкция рамы;</li>
+<li>Высокая надежность комплектующих и качество сборки по самым передовым технологиям;</li>
+<li>Инновационная система амортизации AirCushion с эластомерами снижает нагрузку на суставы, делая тренировки максимально безопасными;</li>
+<li>Контроль пульса: Встроенные сенсоры пульса и возможность подключения кардиопояса обеспечивают точный контроль над сердечным ритмом.</li>
+]]>
+                </description>
+                <param name="Анонс">Беговая дорожка CardioPower T60 - V6C</param>
+                <param name="Доступное количество">0</param>
+                <param name="Артикул">T60 - V6C</param>
+                <param name="Бренд">CardioPower</param>
+                <param name="Страна изготовления">КНР</param>
+                <param name="Тип двигателя">постоянного тока DC</param>
+                <param name="Максимальный вес пользователя, кг">150</param>
+                <param name="Максимальная скорость, км/ч">18</param>
+                <param name="Минимальная скорость, км/ч">1</param>
+                <param name="Назначение">домашние</param>
+                <param name="Тип беговой дорожки">электрические</param>
+                <param name="Регулировка угла наклона">электронный</param>
+                <param name="Поддержка кардиопояса">есть</param>
+                <param name="Тип конструкции">складные</param>
+                <param name="Мощность двигателя">3.25</param>
+                <param name="Пиковая мощность двигателя">4.25</param>
+                <param name="Беговое полотно, см">150 х 52</param>
+                <param name="Дека, мм">18</param>
+                <param name="Амортизация">есть</param>
+                <param name="Тип дисплея">LCD</param>
+                <param name="Подсветка дисплея">есть</param>
+                <param name="Показания консоли">скорость / расстояние / время / наклон / частота пульса / калории / программы</param>
+                <param name="Общее количество программ">14</param>
+                <param name="Язык(и) интерфейса">английский</param>
+                <param name="Размер в рабочем состоянии Длина, см">185.2</param>
+                <param name="Размер в рабочем состоянии Ширина, см">85</param>
+                <param name="Размер в рабочем состоянии Высота, см">142.5</param>
+                <param name="Вес Нетто, кг">105</param>
+                <param name="Вес Брутто, кг">115</param>
+                <param name="Преимущество 1">Автоматически регулируемый угол наклона до 18 градусов обеспечивает высокую вариативность интервальных тренировок с углом
+                    наклона.
+                </param>
+                <param name="Преимущество 2">Мощный электродвигатель 3,25 л.с. с пиковой мощностью 4,25 л.с.</param>
+                <param name="Преимущество 3">усиленная стальная рама, ударопрочный пластик и высококачественная MDF дека.</param>
+                <param name="Преимущество 4">Удобная консоль с клавишами быстрого управления.</param>
+                <param name="Преимущество 5">Широкий LCD дисплей.</param>
+                <param name="Доступность">Y</param>
+                <param name="Габариты упаковки Длина, см">191</param>
+                <param name="Габариты упаковки Ширина, см">88</param>
+                <param name="Габариты упаковки Высота, см">37.5</param>
+            </offer>
+            <offer id="39231" type="vendor.model" available="true">
+                <url>https://www.wellfitness.ru/catalog/yagodichnye_myshtsy_smith_strength_da032_glute/</url>
+                <price>237500</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>4273</categoryId>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/c4d/v0avabrpke7trop61a28xsdtx98yu894/0ba69c34-2680-11ec-80df-00259003a1ce_1595995f-9279-11ee-96e3-addb57161d8d.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/04a/hwgkkh0omon1ubldngfx9q3xze0fj6ft/0ba69c34-2680-11ec-80df-00259003a1ce_1595a3ce-9279-11ee-96e3-addb57161d8d.png
+                </picture>
+                <picture>
+                    https://www.wellfitness.ru/upload/iblock/436/mw6i171nen2wybpw2y1p0tcuyyhfwkgy/0ba69c34-2680-11ec-80df-00259003a1ce_1595a934-9279-11ee-96e3-addb57161d8d.png
+                </picture>
+                <vendor>SMITH</vendor>
+                <model>Тренажер Smith DA032 Ягодичные мышцы</model>
+                <description>
+                    <![CDATA[
+<li>Регулируемое положение опоры для ноги позволяет подобрать наиболее комфортный диапазон для каждого.</li>
+<li>Рельефные полушки для предплечий под углом, также изогнутая поверхность опоры для колена обеспечивают точное и удобное положение пользователя.</li>
+]]>
+                </description>
+                <param name="Анонс">Ягодичные мышцы Smith Strength DA032 GLUTE</param>
+                <param name="Доступное количество">2</param>
+                <param name="Артикул">DA032</param>
+                <param name="Бренд">SMITH</param>
+                <param name="Страна изготовления">КНР</param>
+                <param name="Максимальный вес пользователя, кг">150</param>
+                <param name="Размер в рабочем состоянии Длина, см">150</param>
+                <param name="Размер в рабочем состоянии Ширина, см">113</param>
+                <param name="Размер в рабочем состоянии Высота, см">157</param>
+                <param name="Вес Нетто, кг">211</param>
+                <param name="Вес Брутто, кг">237</param>
+                <param name="Преимущество 1">Качество отделки:специальное двойное порошковое покрытие-антистатик, устойчивое к сколам и царапинам;
+                    прочные и плотные анатомические виниловые валики и подушки;
+                    ручки и захваты из износостойкого абсорбирующего ПВХ-пластика на алюминиевых манжетах.
+                </param>
+                <param name="Преимущество 2">Надежность и безопасность:усиленная рама из сверхпрочного стального профиля 100мм x 50мм толщиной 3 и 2.5 мм, высокоточная сварка;
+                    элементы нагружения и держатели для хранения дисков из нержавеющей стали; нескользящие резиновые опоры для стабильной фиксации и предотвращения повреждения
+                    пола.
+                </param>
+                <param name="Преимущество 3">Удобство использования:интуитивно понятные цветные штифты на пружинах, весовые стеки с покрытием против трения;
+                    индикаторы веса плит в килограммах, стальные магнитные селекторы веса с цветовыми обозначениями и спиральным шнуром;
+                    цветовое обозначение рычагов и пронумерованные позиции;
+                    таблички с упражнениями и наглядными инструкциями.
+                </param>
+                <param name="Преимущество 4">Производство:Static Test (статический тест): 1500 кг в 5 мин. интервале;
+                    LifeTest (тест жизненного цикла): 250 000 повторений на 80%-160% от максимальной нагрузки;
+                    полная сборка перед окрашиванием и защитным покрытием: для выявления потенциальных проблем и гарантии высокого качества и износостойкости.
+                </param>
+                <param name="Доступность">Y</param>
+                <param name="Габариты упаковки Длина, см">161</param>
+                <param name="Габариты упаковки Ширина, см">75</param>
+                <param name="Габариты упаковки Высота, см">36</param>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>
