@@ -7,7 +7,6 @@ return [
     'debug' => false,
     'feedUrl' => '', // ссылка на фид
     'feedPath' => 'assets/feeds/test.xml', // путь к файлу фида на сервере, указывать от корня сайта
-    'imagePath' => 'assets/imported_images/', // путь для загрузки картинок, указывать от корня сайта
     'importCategories' => true, // импортировать категории?
     'importProducts' => true, // импортировать товары?
     'importMode' => '', // возможные значения create - только создание новых; update - обновление существующих; пустая строка - создание и обновление.
@@ -15,11 +14,14 @@ return [
     'createUniqueAlias' => true, // добавить feed_id к псевдониму?
     'updateCategoryStructure' => true, // позволяет сформировать структуру категорий как в файле импорта
     'saveAlias' => false, // сохранить псевдоним указанный в файле импорта?
+    'setOptions' => true, // установить опции товара?
+
+    'imagePath' => 'assets/imported_images/', // путь для загрузки картинок, указывать от корня сайта
+    'allowDownloadImages' => true, // разрешить загрузку картинок из удалённого источника?
+    'removeOldFiles' => true, // очистить галерею перед добавлением новых фото?
     'setGallery' => false, // установить галерею товара?
     'setGalleryOnlyNew' => true, // установить галерею только для новых товаров?
-    'setOptions' => true, // установить опции товара?
-    'removeOldFiles' => true, // очистить галерею перед добавлением новых фото?
-    'allowDownloadImages' => true, // разрешить загрузку картинок из удалённого источника?
+
     'valueImplodeSeparator' => '; ', // разделитель значений для преобразования в строку
     'valueExplodeSeparator' => ',', // разделитель значений для преобразования в массив
     'offerCategoryTag' => 'main_category', // тег содержащий feed_id родительской категории, если не указан родитель будет взят из атрибутов тега offer

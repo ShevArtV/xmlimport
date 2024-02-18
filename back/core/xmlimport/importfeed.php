@@ -104,7 +104,7 @@ class ImportFeed
         foreach ($result['fileList'] as $filename) {
             $data = json_decode(file_get_contents($result['directory'] . $filename), true);
             $data['params'] = json_decode($data['params'], true);
-            $pictures = $data['picture'];
+            $pictures = is_array($data['picture']) ? $data['picture'] : [$data['picture']];
             unset($data['param']);
 
             $data = $this->prepareData($data, $result['type']);
@@ -124,6 +124,17 @@ class ImportFeed
             if (($this->config['setGallery'] || ($this->config['setGalleryOnlyNew'] && $this->isNew)) && !empty($pictures)) {
                 $this->setGallery($pictures, $resource);
             }
+
+            if(file_exists( $this->basePath . 'core/components/msearch2/')){
+                if($this->isNew){
+                    $this->modx->runProcessor(
+                        'mgr/index/update',
+                        ['id' => $resource->get('id')],
+                        ['processors_path' => $this->basePath . 'core/components/msearch2/processors/']
+                    );
+                }
+            }
+
             $this->isNew = false;
             unset($data);
         }
@@ -470,7 +481,7 @@ class ImportFeed
      * @param $res
      * @return void
      */
-    private function manageCategoryOption($option, $res): void
+    private function manageCategoryOption(msOption $option, modResource $res): void
     {
         $table = $this->modx->getTableName('msCategoryOption');
         if (!$this->modx->getObject('msCategoryOption', array('option_id' => $option->id, 'category_id' => $res->parent))) {
@@ -558,11 +569,11 @@ class ImportFeed
     }
 
     /**
-     * @param $photos
-     * @param $resource
+     * @param array $photos
+     * @param modResource $resource
      * @return void
      */
-    private function setGallery($photos, $resource): void
+    private function setGallery(array $photos, modResource $resource): void
     {
         if (!is_dir($this->basePath . $this->config['imagePath'])) {
             mkdir($this->basePath . $this->config['imagePath'], 0700, 1);
