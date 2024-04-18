@@ -1,5 +1,6 @@
 <?php
 
+require_once './downloadfeed.php';
 /**
  *
  */
@@ -300,7 +301,7 @@ class ImportFeed
         if ($vendorData['logo']) {
             $logoPath = $this->basePath . $this->config['imagePath'] . basename($vendorData['logo']);
             if (!file_exists($logoPath)) {
-                $this->download($vendorData['logo'], $logoPath);
+                DownloadFeed::download($vendorData['logo'], $logoPath);
             }
             $vendorData['logo'] = $this->config['imagePath'] . basename($vendorData['logo']);
         }
