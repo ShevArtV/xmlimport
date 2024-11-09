@@ -17,7 +17,7 @@ class ReadingFile
         $search = ['category', 'offer'];
         $directories = [];
 
-        $reader = new XMLReader;
+        $reader = new \XMLReader;
         $success = $reader->open($this->basePath . $this->config['feedPath']);
         if (!$success) {
             $this->logger->log("[ReadingFile::read] Невозможно считать файл {$this->config['feedPath']}. Возможно он содержит ошибки XML.", [], 1);
@@ -41,7 +41,7 @@ class ReadingFile
             if (in_array($reader->name, $search)) {
                 $xml = $reader->readOuterXML();
                 if (strpos($xml, "</{$reader->name}>") === false) continue;
-                if ($obj = new SimpleXMLElement($xml)) {
+                if ($obj = new \SimpleXMLElement($xml)) {
                     $obj->deleted = 0;
                     $obj->id = $obj->attributes()->id ? $obj->attributes()->id->__toString() : $obj->id;
                     if (!$obj->name && $obj->__toString()) {

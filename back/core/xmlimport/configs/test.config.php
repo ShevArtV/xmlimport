@@ -11,7 +11,9 @@ return [
     'importProducts' => true, // импортировать товары?
     'importMode' => '', // возможные значения create - только создание новых; update - обновление существующих; пустая строка - создание и обновление.
     'createUniquePagetitle' => false, // создавать уникальный pagetitle? Отменяет настройку createUniqueAlias
+    'uniquePagetitleFields' => ['supplier', 'feed_id'], // поля добавляемые для уникализации заголовка
     'createUniqueAlias' => true, // добавить feed_id к псевдониму?
+    'uniqueAliasFields' => ['supplier', 'feed_id'], // поля добавляемые для уникализации псевдонима
     'updateCategoryStructure' => true, // позволяет сформировать структуру категорий как в файле импорта
     'saveAlias' => false, // сохранить псевдоним указанный в файле импорта?
     'setOptions' => true, // установить опции товара?
@@ -26,6 +28,8 @@ return [
     'valueExplodeSeparator' => ',', // разделитель значений для преобразования в массив
     'offerCategoryTag' => 'main_category', // тег содержащий feed_id родительской категории, если не указан родитель будет взят из атрибутов тега offer
     'supplier' => 'arnika', // позволяет независимо обновлять товары от разных поставщиков
+    'keyForDeleted' => ['offer' => ['in_stock' => 0], 'category' => ['deleted' => 1]], // позволяет указать ключи полей для определения удалённых товаров и категорий
+    'customHandlers' => ['offer' => ['path' => 'handlers/test.php', 'function' => 'test']], // позволяет использовать пользовательские функции для обработки данных
 
 
     'paramValueTemplates' => [

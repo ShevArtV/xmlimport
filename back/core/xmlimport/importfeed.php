@@ -1,6 +1,7 @@
 <?php
 
-require_once './downloadfeed.php';
+require_once 'downloadfeed.php';
+
 /**
  *
  */
@@ -83,15 +84,21 @@ class ImportFeed
         $output['type'] = $type;
         $output['directory'] = $this->supplierPath . $type . '/';
         if (!file_exists($output['directory'])) {
-            if($this->config['debug']) $this->logger->log("[ImportFeed:getFileList] Директория с файлами типа $type не найдена.", [], 1);
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed:getFileList] Директория с файлами типа $type не найдена.", [], 1);
+            }
         }
         $output['fileList'] = scandir($output['directory']);
         unset($output['fileList'][0], $output['fileList'][1]);
         if (empty($output['fileList'])) {
-            if($this->config['debug']) $this->logger->log("[ImportFeed:getFileList] Директория с файлами типа $type пустая.", [], 1);
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed:getFileList] Директория с файлами типа $type пустая.", [], 1);
+            }
         }
 
-        if($this->config['debug']) $this->logger->log("[ImportFeed:getFileList] Получен список файлов типа $type.", $output);
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed:getFileList] Получен список файлов типа $type.", $output);
+        }
 
         return $output;
     }
@@ -112,7 +119,9 @@ class ImportFeed
             $productOptions = $data['productOptions'];
             unset($data['productOptions']);
 
-            if (!$resource = $this->manageResource($data)) return false;
+            if (!$resource = $this->manageResource($data)) {
+                return false;
+            }
 
             if (!empty($productOptions) && $this->config['setOptions']) {
                 $this->setOptions($productOptions, $resource);
@@ -126,8 +135,8 @@ class ImportFeed
                 $this->setGallery($pictures, $resource);
             }
 
-            if(file_exists( $this->basePath . 'core/components/msearch2/')){
-                if($this->isNew){
+            if (file_exists($this->basePath . 'core/components/msearch2/')) {
+                if ($this->isNew) {
                     $this->modx->runProcessor(
                         'mgr/index/update',
                         ['id' => $resource->get('id')],
@@ -150,7 +159,9 @@ class ImportFeed
     private function prepareData(array $data, string $type): array
     {
         if (empty($data)) {
-            if($this->config['debug']) $this->logger->log('[ImportFeed::prepareData] Не переданы данные ресурса.', [], true);
+            if ($this->config['debug']) {
+                $this->logger->log('[ImportFeed::prepareData] Не переданы данные ресурса.', [], true);
+            }
         }
         $output = [];
         $output['feed_id'] = $data['id'];
@@ -186,6 +197,10 @@ class ImportFeed
                     } else {
                         $output[$key] = $data[$value];
                     }
+
+                    if (in_array($output[$key], ['true', 'false'])) {
+                        $output[$key] = $output[$key] === 'true' ? 1 : 0;
+                    }
                 }
 
                 $output = array_merge($this->config['productDefaultFields'], $output);
@@ -201,9 +216,32 @@ class ImportFeed
                 $output[$field] = $this->truncate($output[$field], $length);
             }
         }
-        $output['published'] = $data['deleted'] ? 0 : 1;
-        if($this->config['debug']) $this->logger->log("[ImportFeed::prepareData] Подготовлены данные товара {$output['pagetitle']}");
-        return $output;
+        if((int)$data['deleted']){
+            $output = array_merge($output, $this->config['keyForDeleted'][$type]);
+        }
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::prepareData] Подготовлены данные товара {$output['pagetitle']}");
+        }
+        return $this->runCustomHandlers($output, $type);
+    }
+
+    /**
+     * @param array $data
+     * @param string $type
+     *
+     * @return array
+     */
+    private function runCustomHandlers(array $data, string $type): array
+    {
+        if (!$this->config['customHandlers'][$type]['path']) {
+            return $data;
+        }
+        include_once $this->config['customHandlers'][$type]['path'];
+
+        if (!function_exists($this->config['customHandlers'][$type]['function'])) {
+            return $data;
+        }
+        return call_user_func_array($this->config['customHandlers'][$type]['function'], [$data, $type, $this->logger]);
     }
 
     /**
@@ -226,7 +264,9 @@ class ImportFeed
         }
         $id = $resource->get('id');
         unset($resource);
-        if($this->config['debug']) $this->logger->log("[ImportFeed::getParentId] Для feed_id = {$feedId} получен родитель {$id}.");
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::getParentId] Для feed_id = {$feedId} получен родитель {$id}.");
+        }
         return $id;
     }
 
@@ -247,16 +287,22 @@ class ImportFeed
             foreach ($optionData['from'] as $key) {
                 if (strpos($key, 'params') === 0) {
                     $k = str_replace('params_', '', $key);
-                    if (!$data['params'][$k]) continue;
+                    if (!$data['params'][$k]) {
+                        continue;
+                    }
                     $optionData['value'] = array_merge($optionData['value'], $data['params'][$k]);
                     $optionData['caption'] = $optionData['caption'] ?: $k;
                 } elseif (strpos($key, 'attr') === 0) {
                     $k = str_replace('attr_', '', $key);
-                    if (!$data['@attributes'][$k]) continue;
+                    if (!$data['@attributes'][$k]) {
+                        continue;
+                    }
                     $optionData['value'] = array_merge($optionData['value'], [$data['@attributes'][$k]]);
                     $optionData['caption'] = $optionData['caption'] ?: $k;
                 } else {
-                    if (!$data['params'][$key]) continue;
+                    if (!$data['params'][$key]) {
+                        continue;
+                    }
                     $optionData['value'] = array_merge($optionData['value'], $data['params'][$key]);
                     $optionData['caption'] = $optionData['caption'] ?: $key;
                 }
@@ -265,7 +311,9 @@ class ImportFeed
             unset($optionData['from']);
             $output[] = $optionData;
         }
-        if($this->config['debug']) $this->logger->log("[ImportFeed::getProductOptions] Получены опции для feed_id = {$data['id']}. ", $output);
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::getProductOptions] Получены опции для feed_id = {$data['id']}. ", $output);
+        }
         return $output;
     }
 
@@ -286,7 +334,9 @@ class ImportFeed
                 $vendorData[$k] = $data[$v];
             }
         }
-        if($this->config['debug']) $this->logger->log("[ImportFeed::getVendorData] Получены данные производителя. ", $vendorData);
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::getVendorData] Получены данные производителя. ", $vendorData);
+        }
         return $vendorData;
     }
 
@@ -296,7 +346,9 @@ class ImportFeed
      */
     private function manageVendor(array $vendorData): int
     {
-        if (!$vendorData['name']) return 0;
+        if (!$vendorData['name']) {
+            return 0;
+        }
 
         if ($vendorData['logo']) {
             $logoPath = $this->basePath . $this->config['imagePath'] . basename($vendorData['logo']);
@@ -313,7 +365,9 @@ class ImportFeed
         $id = $vendor->get('id');
         $this->vendors[$vendorData['name']] = $id;
         unset($vendor);
-        if($this->config['debug']) $this->logger->log("[ImportFeed:manageVendor] Обработан производитель {$vendorData['name']}.");
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed:manageVendor] Обработан производитель {$vendorData['name']}.");
+        }
         return $id;
     }
 
@@ -324,13 +378,17 @@ class ImportFeed
     private function manageResource(array $data)
     {
         if (empty($data)) {
-            if($this->config['debug']) $this->logger->log('[ImportFeed::manageResource] Не переданы данные ресурса.', [], true);
+            if ($this->config['debug']) {
+                $this->logger->log('[ImportFeed::manageResource] Не переданы данные ресурса.', [], true);
+            }
         }
         if (!$data['pagetitle']) {
             $data['pagetitle'] = 'Ресурс ' . time();
         } else {
             if ($this->config['createUniquePagetitle']) {
-                $data['pagetitle'] .= ' ' . $this->config['supplier'] . ' ' . $data['feed_id'];
+                foreach($this->config['uniquePagetitleFields'] as $key){
+                    $data['pagetitle'] .=  ' ' . $data[$key];
+                }
             }
         }
         foreach ($this->config['truncated'] as $field => $length) {
@@ -340,7 +398,9 @@ class ImportFeed
         }
 
         if (empty($this->config['searchConditions'][$data['class_key']])) {
-            if($this->config['debug']) $this->logger->log('[ImportFeed::manageResource] Не указаны условия проверки существования ресурса.', [], true);
+            if ($this->config['debug']) {
+                $this->logger->log('[ImportFeed::manageResource] Не указаны условия проверки существования ресурса.', [], true);
+            }
         }
 
         $conditions = $this->config['searchConditions'][$data['class_key']];
@@ -348,11 +408,10 @@ class ImportFeed
             $conditions = str_replace('{' . $key . '}', $v, $conditions);
             if (in_array($key, $this->config['fieldTypes']['array'])) {
                 $data[$key] = !is_array($v) ? explode($this->config['valueImplodeSeparator'], $v) : $v;
-            }
-            elseif (in_array($key, $this->config['fieldTypes']['bool'])) {
+            } elseif (in_array($key, $this->config['fieldTypes']['bool'])) {
                 $v = is_array($v) ? $v[0] : $v;
                 $data[$key] = in_array($v, ['true', 'YES', 'Y', 'Да', '1']) ? 1 : 0;
-            }else{
+            } else {
                 $data[$key] = is_array($v) ? implode($this->config['valueImplodeSeparator'], $v) : $v;
             }
         }
@@ -363,7 +422,9 @@ class ImportFeed
         }
         $c->where($conditions);
         $c->prepare();
-        if($this->config['debug']) $this->logger->log('[ImportFeed::manageResource] SQL для поиска ресурса: ' . $c->toSQL());
+        if ($this->config['debug']) {
+            $this->logger->log('[ImportFeed::manageResource] SQL для поиска ресурса: ' . $c->toSQL());
+        }
         $resource = $this->modx->getObject($data['class_key'], $c);
 
         switch ($this->config['importMode']) {
@@ -394,7 +455,9 @@ class ImportFeed
         }
 
         if (!$resource) {
-            if($this->config['debug']) $this->logger->log('[ImportFeed::manageResource] Ресурс не получен.');
+            if ($this->config['debug']) {
+                $this->logger->log('[ImportFeed::manageResource] Ресурс не получен.');
+            }
             return false;
         }
 
@@ -404,7 +467,9 @@ class ImportFeed
         } else {
             $pagetitle = $data['pagetitle'];
             if ($this->config['createUniqueAlias'] && !$this->config['createUniquePagetitle']) {
-                $pagetitle .= ' ' . $this->config['supplier'] . ' ' . $data['feed_id'];
+                foreach($this->config['uniqueAliasFields'] as $key){
+                    $pagetitle .=  ' ' . $data[$key];
+                }
             }
             $data['alias'] = $resource->get('alias') ?: $this->translit($pagetitle);
         }
@@ -416,11 +481,12 @@ class ImportFeed
             unlink($fileName);
         }
         unset($data['productOptions']);
-        if($this->config['debug']) $this->logger->log('[ImportFeed::manageResource] Был обработан ресурс со следующими данными. ', $data);
+        if ($this->config['debug']) {
+            $this->logger->log('[ImportFeed::manageResource] Был обработан ресурс со следующими данными. ', $data);
+        }
         $resource->fromArray($data, '', 1);
         $resource->save();
         return $resource;
-
     }
 
     /**
@@ -430,7 +496,9 @@ class ImportFeed
      */
     private function setOptions(array $options, modResource $resource): void
     {
-        if($this->config['debug']) $this->logger->log("[ImportFeed::setOptions] Опции товара. ", ['options' => $options, 'rid' => $resource->id]);
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::setOptions] Опции товара. ", ['options' => $options, 'rid' => $resource->id]);
+        }
         foreach ($options as $optionData) {
             $option = $this->manageOption($optionData['key'], $optionData);
             $this->manageCategoryOption($option, $resource);
@@ -460,9 +528,13 @@ class ImportFeed
             $option = $this->modx->newObject('msOption');
             $option->fromArray($optionData, '', true);
             $option->save();
-            if($this->config['debug']) $this->logger->log("[ImportFeed::manageOption] Опция {$key} создана.");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::manageOption] Опция {$key} создана.");
+            }
         } else {
-            if($this->config['debug']) $this->logger->log("[ImportFeed::manageOption] Опция {$key} уже существует.");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::manageOption] Опция {$key} уже существует.");
+            }
             switch ($optionData['type']) {
                 case 'combo-multiple':
                 case 'combobox':
@@ -489,7 +561,9 @@ class ImportFeed
             $sql = "INSERT INTO {$table} (`option_id`,`category_id`,`active`, `required`, `value`) VALUES ({$option->id}, {$res->parent}, 1, 0, '')";
             $stmt = $this->modx->prepare($sql);
             $stmt->execute();
-            if($this->config['debug']) $this->logger->log("[ImportFeed::manageCategoryOption] Опция для категории создана.");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::manageCategoryOption] Опция для категории создана.");
+            }
         } else {
             $q = $this->modx->newQuery('msCategoryOption');
             $q->command('UPDATE');
@@ -497,7 +571,9 @@ class ImportFeed
             $q->set(['active' => 1]);
             $q->prepare();
             $q->stmt->execute();
-            if($this->config['debug']) $this->logger->log("[ImportFeed::manageCategoryOption] Опция для категории обновлена.");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::manageCategoryOption] Опция для категории обновлена.");
+            }
         }
     }
 
@@ -538,7 +614,9 @@ class ImportFeed
             $sql = "INSERT INTO {$table} (`product_id`,`key`,`value`) VALUES ({$res->id}, \"{$option->key}\", {$v});";
             $stmt = $this->modx->prepare($sql);
             $stmt->execute();
-            if($this->config['debug']) $this->logger->log("[ImportFeed::manageProductOption]  Установлено значение $v для опция с ключом {$option->key}.");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::manageProductOption]  Установлено значение $v для опция с ключом {$option->key}.");
+            }
         }
     }
 
@@ -558,7 +636,9 @@ class ImportFeed
                 'supplier' => $this->config['supplier'],
                 'context_key' => $this->config['ctx'],
             ])) {
-                if ($categoryObj->get('id') === $parent) continue;
+                if ($categoryObj->get('id') === $parent) {
+                    continue;
+                }
                 $categoryMember = $this->modx->newObject('msCategoryMember');
                 $categoryMember->fromArray([
                     'product_id' => $product_id,
@@ -579,26 +659,38 @@ class ImportFeed
         if (!is_dir($this->basePath . $this->config['imagePath'])) {
             mkdir($this->basePath . $this->config['imagePath'], 0700, 1);
         }
-        if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Устанавливаем галерею ", $photos);
+        if ($this->config['debug']) {
+            $this->logger->log("[ImportFeed::setGallery] Устанавливаем галерею ", $photos);
+        }
         if ($this->config['removeOldFiles']) {
             $this->modx->removeCollection('msProductFile', ['product_id' => $resource->get('id')]);
-            if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Старые файлы галереи были удалены");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::setGallery] Старые файлы галереи были удалены");
+            }
         }
         foreach ($photos as $url) {
             $url = trim($url);
-            if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Обрабатывается фото {$url}");
+            if ($this->config['debug']) {
+                $this->logger->log("[ImportFeed::setGallery] Обрабатывается фото {$url}");
+            }
             $path = $this->config['imagePath'] . basename($url);
             $fullPath = $this->basePath . $path;
 
             if (!file_exists($fullPath)) {
                 if ($this->config['allowDownloadImages']) {
                     if (!DownloadFeed::download($url, $path)) {
-                        if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Не удалось загрузить файл {$url}");
+                        if ($this->config['debug']) {
+                            $this->logger->log("[ImportFeed::setGallery] Не удалось загрузить файл {$url}");
+                        }
                         continue;
                     }
-                    if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Фото загружено на сервер по пути {$fullPath}");
+                    if ($this->config['debug']) {
+                        $this->logger->log("[ImportFeed::setGallery] Фото загружено на сервер по пути {$fullPath}");
+                    }
                 } else {
-                    if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Фото отсутствует на сервере и не было загружено по инициативе пользователя.");
+                    if ($this->config['debug']) {
+                        $this->logger->log("[ImportFeed::setGallery] Фото отсутствует на сервере и не было загружено по инициативе пользователя.");
+                    }
                     continue;
                 }
             }
@@ -613,9 +705,13 @@ class ImportFeed
                 'processors_path' => $this->modx->getOption('core_path') . 'components/minishop2/processors/mgr/',
             ]);
             if ($response->isError()) {
-                if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Не удалось добавить фото в галерею ", $response->getAllErrors());
+                if ($this->config['debug']) {
+                    $this->logger->log("[ImportFeed::setGallery] Не удалось добавить фото в галерею ", $response->getAllErrors());
+                }
             } else {
-                if($this->config['debug']) $this->logger->log("[ImportFeed::setGallery] Фото {$url} успешно добавлено в галерею");
+                if ($this->config['debug']) {
+                    $this->logger->log("[ImportFeed::setGallery] Фото {$url} успешно добавлено в галерею");
+                }
                 unlink($fullPath);
             }
             unset($path, $data, $response, $url, $fullPath);
@@ -631,13 +727,39 @@ class ImportFeed
     private function translit(string $value): string
     {
         $converter = array(
-            'а' => 'a', 'б' => 'b', 'в' => 'v', 'г' => 'g', 'д' => 'd',
-            'е' => 'e', 'ё' => 'e', 'ж' => 'zh', 'з' => 'z', 'и' => 'i',
-            'й' => 'y', 'к' => 'k', 'л' => 'l', 'м' => 'm', 'н' => 'n',
-            'о' => 'o', 'п' => 'p', 'р' => 'r', 'с' => 's', 'т' => 't',
-            'у' => 'u', 'ф' => 'f', 'х' => 'h', 'ц' => 'c', 'ч' => 'ch',
-            'ш' => 'sh', 'щ' => 'sch', 'ь' => '', 'ы' => 'y', 'ъ' => '',
-            'э' => 'e', 'ю' => 'yu', 'я' => 'ya',
+            'а' => 'a',
+            'б' => 'b',
+            'в' => 'v',
+            'г' => 'g',
+            'д' => 'd',
+            'е' => 'e',
+            'ё' => 'e',
+            'ж' => 'zh',
+            'з' => 'z',
+            'и' => 'i',
+            'й' => 'y',
+            'к' => 'k',
+            'л' => 'l',
+            'м' => 'm',
+            'н' => 'n',
+            'о' => 'o',
+            'п' => 'p',
+            'р' => 'r',
+            'с' => 's',
+            'т' => 't',
+            'у' => 'u',
+            'ф' => 'f',
+            'х' => 'h',
+            'ц' => 'c',
+            'ч' => 'ch',
+            'ш' => 'sh',
+            'щ' => 'sch',
+            'ь' => '',
+            'ы' => 'y',
+            'ъ' => '',
+            'э' => 'e',
+            'ю' => 'yu',
+            'я' => 'ya',
         );
 
         $value = mb_strtolower($value);
